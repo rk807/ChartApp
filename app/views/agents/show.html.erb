@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empname:</strong>
+  <%= @agent.EmpName %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @agent.hours %>
+</p>
+
+ <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script>
+  $(function() {
+    $( "#draggable" ).draggable();
+  });
+  </script>
+
+  <div id="draggable" class="ui-widget-content">
+  <p>Drag me around</p>
+</div>
+
+
+
+<%= link_to 'Edit', edit_agent_path(@agent) %> |
+<%= link_to 'Back', agents_path %>

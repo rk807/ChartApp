@@ -1,0 +1,81 @@
+<%= form_for(@agent) do |f| %>
+  <% if @agent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
+
+      <ul>
+      <% @agent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :EmpName %><br>
+    <%= f.text_field :EmpName %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br>
+    <%= f.number_field :hours %>
+  </div>
+
+  <input type="text" class="mydatePicker"/>
+
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+      <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <div class="dget">
+  <label for="tags">Tags: </label>
+  <input id="tags" />
+</div>
+
+
+
+<div id="progressbar"></div>
+
+<div id="slider"></div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+    <li><a href="#tabs-3">Aenean lacinia</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi  dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+  </div>
+  <div id="tabs-2">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+  <div id="tabs-3">
+    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse  hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. it.</p>
+  </div>
+</div>
+
+<p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes." /></p>
+<% end %>
